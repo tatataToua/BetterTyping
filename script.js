@@ -48,7 +48,7 @@ if (document.title === 'Speed Test') {
                 characterSpan.classList.remove('incorrect')
                 correct = false;
             }   // green input
-            else if (character === characterSpan.innerText) {
+            else if (character === characterSpan.innerText.normalize()) {
                 characterSpan.classList.add('correct')
                 characterSpan.classList.remove('incorrect')
                 correctCount++;
