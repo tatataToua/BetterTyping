@@ -175,6 +175,12 @@ async function getNextQuote() {
         incorrectTotal = 0;
         wordsTyped = 0;
         const quote = await getRandomSentence();
+
+        if (!quote) {
+            console.error("Failed to getch a valid quote");
+            return;
+        }
+
         user_text.innerHTML = '';
         quote.split('').forEach(character => {
             const characterSpan = document.createElement('span')
@@ -246,7 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navItems = document.querySelectorAll(".carousel-nav .nav-item");
     const prevButton = document.querySelector(".carousel-btn.left");
     const nextButton = document.querySelector(".carousel-btn.right");
-    
+
     let currentIndex = 0;
 
     function updateCarousel() {
@@ -270,9 +276,10 @@ document.addEventListener("DOMContentLoaded", () => {
         currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
         updateCarousel();
     }
-
-    prevButton.addEventListener("click", showPrevItem);
-    nextButton.addEventListener("click", showNextItem);
+    if (document.title === 'improve.html') {
+        prevButton.addEventListener("click", showPrevItem);
+        nextButton.addEventListener("click", showNextItem);
+    }
 
     navItems.forEach((navItem, index) => {
         navItem.addEventListener("click", () => {
