@@ -11,7 +11,7 @@ function sendMessage() {
 
 async function getRandomSentence() {
     try {
-        const response = await fetch('https://quoteslate.vercel.app/api/quotes/random?minLength=150&maxLength=200');
+        const response = await fetch('https://quoteslate.vercel.app/api/quotes/random?minLength=100&maxLength=150');
         const data = await response.json();
         console.log(data.quote)
         return data.quote;
@@ -220,6 +220,14 @@ if (document.title === 'Speed Test') {
     });
 }
 
+// blocks backspaces
+if (document.title === 'Speed Test') {
+    test_area.addEventListener('keydown', (event) => {
+        if (event.key === 'Backspace') {
+            event.preventDefault();
+        }
+    });
+}
 
 // gets next quote, clears everything
 if (document.title === 'Speed Test') {
@@ -232,6 +240,7 @@ if (document.title === 'Speed Test') {
     });
 }
 
+//carousel
 document.addEventListener("DOMContentLoaded", () => {
     const carouselItems = document.querySelectorAll(".carousel-item");
     const navItems = document.querySelectorAll(".carousel-nav .nav-item");
