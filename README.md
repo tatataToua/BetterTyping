@@ -3,7 +3,7 @@
 **GetBetterTyping** is a simple web application designed to help users improve their typing speed and accuracy
 
 ## Live Demo
-Try it out here:[GetBetterTyping](https://getbettertyping.netlify.app)
+Try it out here:[GetBetterTyping] (https://getbettertyping.netlify.app)
 
 ---
 
