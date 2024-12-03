@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
         currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
         updateCarousel();
     }
-    if (document.title === 'improve.html') {
+    if (document.title === 'Improve') {
         prevButton.addEventListener("click", showPrevItem);
         nextButton.addEventListener("click", showNextItem);
     }
