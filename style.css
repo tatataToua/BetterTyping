@@ -1,0 +1,432 @@
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+header,
+footer {
+    background-color: rgb(128, 0, 0);
+}
+
+header h2 {
+    color: white;
+    padding-left: 10px;
+    font-size: 35px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 6rem 1fr 3rem;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-areas:
+        "header header header"
+        "body body body"
+        "footer footer footer"
+    ;
+    margin: 0;
+    height: 100vh;
+    /* overflow: hidden; stops your screen from scrolling*/
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row;
+    font-size: 20px;
+}
+
+nav ul li {
+    display: flex;
+    padding: 1rem;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav a {
+    color: black;
+}
+
+img {
+    display: inline;
+    max-width: 250px;
+}
+
+main {
+    grid-area: body;
+    background-color:rgb(242, 232, 198);
+}
+
+.p {
+    font-size: 28px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2, h3{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+footer {
+    grid-area: footer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    color: white;
+    font-family: Sans-serif;
+}
+
+body p {
+    font-size: 20px;
+    text-align: center;
+}
+
+body img {
+    display: flex;
+    margin: 0 auto;
+    transform: scale(2);
+    padding-top: 70px;
+}
+
+.test-img {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 210px;
+    margin-top: 10px;
+}
+.start-button {
+    display: flex;
+    background-color: darkgreen;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 auto;
+    transform: translateY(8rem);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.start-button a {
+    text-decoration: none;
+    color: white;
+}
+.test-button {
+    display: flex;
+    background-color: darkgreen;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 auto;
+    transform: translateY(-5rem);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.test-area {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    max-height: 150px;
+    margin: auto;
+    resize: none;
+    margin-top: -2rem;
+}
+
+.contact label {
+    display: block;
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact input {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+textarea,
+button {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 400px;
+    height: 170px;
+}
+
+.introduction h3,
+.our-story h3,
+.contact h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.introduction p,
+.our-story p {
+    padding: 5px;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.image-container{
+    display: flex;
+    overflow: hidden;
+    transform: translateY(-25px);
+}
+
+button {
+    margin-bottom: 10px;
+}
+
+.correct {
+    color:rgb(0, 121, 0);
+}
+
+.incorrect {
+    color: red;
+    text-decoration: underline;
+}
+
+#accuracy-bar-container {
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+
+
+#accuracy-bar {
+    display: flex;
+    left: 50%;
+    width: 0%;
+    background-color:rgb(152, 43, 28);
+    height: 30px;           
+    transition: width 0.5s; 
+    animation: pulse 1.5s infinite ease-in-out;
+    margin-top: -5rem;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+#user-text {
+    font-size: 35px;
+    font-family:'Franklin Gothic Medium';
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+    cursor: text;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+#tip {
+    font-size: 23px;
+    font-family:'Franklin Gothic Medium';
+}
+
+.not-text {
+    padding-top: 80px;
+}
+
+.timerbutton {
+    padding-top: 80px;
+}
+
+.timer {
+    font-size: 30px;
+}
+.modal-inner {
+    background-color:rgb(152, 43, 28);
+    border-radius: 5px;
+    padding: 70px 25px;
+    text-align: center;
+    width: 380px;
+    height: 260px;
+    opacity: 90%;
+}
+
+.modal-inner p{
+    line-height: 24px;
+    margin: 10px 0;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.modal-inner h1 {
+    margin: 0;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.modal {
+    width: 470px;
+    height: 440px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 15px;
+}
+
+.modal.open {
+    opacity: 1;
+    z-index: 999;
+}
+
+#closeModal {
+    display: flex;
+    background-color: darkgreen;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 100px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    display: none;
+}
+
+.modal.open + .modal-overlay {
+    display: flex;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel {
+    list-style-type: none;
+    position: relative;
+    width: 50%;
+    height: 12rem;
+}
+
+.carousel-item {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+}
+
+.tip {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item > li {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-btn{
+    width: 2rem;
+    height: 2rem;
+}
+
+.carousel-btn.left{
+    position: relative;
+    left: 3rem;
+    top: 6rem;
+}
+
+.carousel-btn.right{
+    position: relative;
+    right: 3rem;
+    top: 6rem;
+} 
+
+.carousel-btn:hover{
+    cursor: pointer;
+    background-color:rgb(152, 43, 28);
+    color: white;
+}
+
+.carousel-nav {
+    display: flex;
+
+    gap: 0.5rem;
+    opacity: 0.8;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(12rem);
+}
+
+.nav-item {
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border-radius: 50%;
+
+    opacity: 0.3;
+}
+
+.nav-item.active {
+    opacity: 0.7;
+}
+

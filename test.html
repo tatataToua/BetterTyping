@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed Test</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <script src="script.js" defer></script>
+    <header>
+      <h2>Get Better Typing</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="test.html">Speed Test</a></li>
+          <li><a href="improve.html">Improvement</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="text-to-type">
+        <p id="user-text">Please click the green button to start.</p>
+        <br><p id="tip">Tip: Using backspace is unneccesary during the test.</p>
+      </div>
+      <div class="not-text">
+        <div id="accuracy-bar-container">
+          <div id="accuracy-bar"></div>
+        </div>
+        <textarea
+          class="test-area"
+          id="test-area"
+          rows="5"
+          placeholder="Start typing here..."
+          disabled
+        ></textarea>
+        <div class="results">
+          <p id="timer" class="timer">00:00</p>
+        </div>
+      </div>
+
+      <div class="timerbutton">
+        <button class="test-button" id="test-button">
+          CLICK HERE TO START!
+        </button>
+      </div>
+
+      <div class="modal" id="modal">
+        <div class="modal-inner">
+          <h1>Results</h1>
+          <p id="wpm">WPM: 0</p>
+          <p id="accuracy-percentage">Accuracy: 0%</p>
+          <p id="incorrect">Incorrect: 0</p>
+          <button id="closeModal">Close</button>
+        </div>
+      </div>
+      <div class="modal-overlay"></div>
+    </main>
+
+    <footer>&copy;2024 Get Better typing. All rights reserved.</footer>
+  </body>
+</html>
